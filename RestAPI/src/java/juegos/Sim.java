@@ -8,6 +8,7 @@ package juegos;
 import javax.ejb.Stateless;
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
+import javax.ws.rs.QueryParam;
 
 /**
  *
@@ -17,10 +18,18 @@ import javax.ws.rs.Path;
 @Path("/data")
 public class Sim {
     
-    @GET
-    public String getInfo(String id){
+   public static boolean valid(String id){
+        return (id == "1" ? true : false);
+    }
     
-        return null;
+    public static String getNombre(String id){
+        return "Raymond";
+    }
+    
+    @GET
+    public String getInfo(@QueryParam("id") String id){
+        
+        return (valid(id) ? Sim.getNombre(id): "Error 402");
     }
     
 }
