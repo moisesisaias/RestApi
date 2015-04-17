@@ -5,10 +5,22 @@
  */
 package juegos;
 
+import javax.ejb.Stateless;
+import javax.ws.rs.GET;
+import javax.ws.rs.Path;
+
 /**
  *
  * @author RaymondStanley
  */
+@Stateless
+@Path("/data")
 public class Sim {
+    
+    @GET
+    public String getInfo(String id){
+    
+        return null;
+    }
     
 }
