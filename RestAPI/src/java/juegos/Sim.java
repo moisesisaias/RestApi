@@ -19,17 +19,18 @@ import javax.ws.rs.QueryParam;
 public class Sim {
     
    public static boolean valid(String id){
-        return (id == "1" ? true : false);
+        return (id.equals("1"));
     }
     
     public static String getNombre(String id){
         return "Raymond";
     }
     
+
     @GET
     public String getInfo(@QueryParam("id") String id){
-        
-        return (valid(id) ? Sim.getNombre(id): "Error 402");
+         
+             return (valid(id)?Sim.getNombre(id):"Error 402");
     }
     
 }
