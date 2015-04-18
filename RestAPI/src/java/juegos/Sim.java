@@ -30,8 +30,7 @@ public class Sim {
     @GET
     public String getInfo(@QueryParam("id") String id){
          
-      
-        return (valid(id)?Sim.getNombre(id):"Error 402");
+             return (valid(id)?Sim.getNombre(id):"Error 402");
     }
     
 }

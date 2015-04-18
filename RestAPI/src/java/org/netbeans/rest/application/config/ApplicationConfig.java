@@ -8,11 +8,12 @@ package org.netbeans.rest.application.config;
 import java.util.Set;
 import javax.ws.rs.core.Application;
 
+
 /**
  *
  * @author Moisés I. Ramírez
  */
-@javax.ws.rs.ApplicationPath("/webresources")
+@javax.ws.rs.ApplicationPath("webresources")
 public class ApplicationConfig extends Application {
 
     @Override
